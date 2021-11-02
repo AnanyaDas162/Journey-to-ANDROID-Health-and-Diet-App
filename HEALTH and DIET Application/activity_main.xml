@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pink"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/height"
+        android:layout_width="245dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="92dp"
+        android:ems="10"
+        android:hint="Enter your height in meters"
+        android:inputType="numberDecimal"
+        android:textColor="#100000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/weight"
+        android:layout_width="246dp"
+        android:layout_height="59dp"
+        android:ems="10"
+        android:hint="Enter your weight in kg"
+        android:inputType="numberDecimal"
+        android:textColor="#190101"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/height" />
+
+    <TextView
+        android:id="@+id/bmi"
+        android:layout_width="238dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="56dp"
+        android:textColor="#020101"
+        android:textSize="26sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="186dp"
+        android:layout_height="105dp"
+        android:layout_marginBottom="261dp"
+        android:text="Check your BMI"
+        android:textAllCaps="false"
+        android:textStyle="bold|italic"
+        app:backgroundTint="#E91E63"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/height"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="134dp"
+        android:layout_height="105dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/next"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bmi"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/d" />
+
+    <Button
+        android:id="@+id/next"
+        android:layout_width="112dp"
+        android:layout_height="95dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginRight="28dp"
+        android:onClick="openActivity"
+        android:text="Next"
+        app:backgroundTint="#E91E63"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="78dp"
+        android:layout_height="68dp"
+        app:layout_constraintBottom_toTopOf="@+id/height"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/b" />
+</androidx.constraintlayout.widget.ConstraintLayout>
